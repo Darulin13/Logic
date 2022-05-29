@@ -28,17 +28,29 @@ const Container = styled.section`
         padding-top:30px;
         padding-bottom:30px;
         font-size:80px;
+        @media(max-width:768px){
+            width:70%;
+        }
     }
     h2{
         font-size:40px;
+        padding-bottom:30px;
+        padding-top:30px;
     }
     h1{
+        padding-bottom:30px;
         font-size:70px;
     }
     img{
         padding-top:20px;
     }
+   
 `
+const linkStyle = {
+    margin: "1rem",
+    textDecoration: "none",
+    color: 'yellow'
+  };
 export default class Contador extends React.Component {
     state = {
         number: 0
@@ -66,7 +78,7 @@ export default class Contador extends React.Component {
                     <h2>{this.state.number}</h2>
                     <button onClick={this.Remove}>    - </button>
                 </div>
-                <Link to="/"><img src="https://img.icons8.com/material-sha" alt="Back" /></Link>
+                <Link to="/" style={linkStyle}>Back</Link>
 
 
             </Container>

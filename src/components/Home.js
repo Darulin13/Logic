@@ -14,13 +14,22 @@ const Container = styled.section`
         display:flex;
         flex-direction:row;
         justify-content:space-between;
+        @media(max-width:437px){
+            width:100%;
+         
+        }
 
     }
-    p{
-        color:yellow
-    }
+    
+   
     
 `
+const linkStyle = {
+    padding:"05px",
+    textDecoration: "none",
+    color: 'yellow'
+    
+  };
 
 export default class Home extends React.Component {
 
@@ -29,10 +38,10 @@ export default class Home extends React.Component {
         return (
             <Container>
                 <div>
-                    <Link to="/Cronometro" >Cronômetro</Link>
-                    <Link to="/Contador" >Contador</Link>
-                     <Link to="/Calculadora" >Calculadora</Link>
-                    <Link to="/Todo" >Todo</Link>
+                    <Link to="/Cronometro"  style={linkStyle}>Stopwatch</Link>
+                    <Link to="/Contador" style={linkStyle }>Counter</Link>
+                     <Link to="/Calculadora" style={linkStyle }>Calculator</Link>
+                    <Link to="/Todo" style={linkStyle}>Todo</Link>
                 </div>  
             </Container>
         )

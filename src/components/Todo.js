@@ -19,7 +19,7 @@ const Container = styled.section`
         justify-content:center;
         align-items:center;
         padding-top:30px;
-        padding-bottom:40vh;
+        padding-bottom:10vh;
  
     }
     h1{
@@ -43,8 +43,15 @@ const Container = styled.section`
        justify-content:center;
        flex-direction:row;
     }
+    ul{
+        padding-top:25px; 
+    }
     
     `
+const linkStyle = {
+    textDecoration: "none",
+    color: 'yellow'
+};
 
 export default class Todo extends React.Component {
     state = {
@@ -89,7 +96,8 @@ export default class Todo extends React.Component {
 
                 </div>
 
-                <Link to="/"><img src="https://img.icons8.com/material-sha" alt="Back" /></Link>            </Container>
+                <Link to="/" style={linkStyle}>Back</Link>
+            </Container>
         )
     }
 }

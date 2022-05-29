@@ -19,11 +19,15 @@ const Container = styled.section`
         flex-direction:row;
         justify-content:space-between;
         align-items:center;
+        @media(max-width:522px){
+            width:50%;
+        }
     }
     button{
         width:30%;
         padding-bottom:5vh;  
         padding-top:05vh;  
+     
     }
     p{
          font-size:30px;
@@ -35,8 +39,12 @@ const Container = styled.section`
     img{
         padding-top:10vh;     
     }
-    
     `
+    const linkStyle = {
+        margin: "1rem",
+        textDecoration: "none",
+        color: 'yellow'
+      };
   
 export default class Cronometro extends React.Component {
     state = {
@@ -71,7 +79,7 @@ export default class Cronometro extends React.Component {
         return (
             <Container>
                 <h1>
-                    Cronômetro
+                Stopwatch
                 </h1>
                 <p>{this.state.number}</p>
                 <div>
@@ -87,7 +95,7 @@ export default class Cronometro extends React.Component {
 
 
                 </div>
-                <Link  to="/"><img src="https://img.icons8.com/material-sha" alt="Back"/></Link>
+                <Link to="/" style={linkStyle}>Back</Link>
 
             </Container>)
 
